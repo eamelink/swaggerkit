@@ -1,0 +1,35 @@
+h1. Swaggerkit
+
+Swaggerkit is a Scala toolkit that helps you generate the Swagger JSON for your REST API, that allows Swagger-aware tools to automatically discover and use your API, and the Swagger-UI tool to show documentation and a sandbox for your API.
+
+The Swagger project itself consists of the Swagger Specification and some implementations for servers and clients. There is a Scala implementation, but it relies on JaxRS, which is often not the technology of choice in your Scala REST API.
+
+Swaggerkit is an alternative implementation that has no dependencies on JaxRS, or any other technology for that matter (except for Scala...). It is basically an set of case classes that form the data structures as described in the Swagger Specification.
+
+From these case classes, the JSON must be generated. This project currently contains an implementation that uses the Play 2.0 JSON library for that. 
+
+h2. Design considerations
+
+ * There is no magic. There are case classes and a small DSL to help you construct the entire documentation structure, but nothing is inferred or automatically generated.
+
+h2. Current Limitations
+
+ * JSON only, there is no XML output supported. This limitation can be lifted in the future.
+ * JSON generation currently depends on Play 2 library, because that's where I use it for. This limitation can be lifted in the future.
+ * API not stable yet. There are still improvements going on, and the API will be changed.
+ * Swagger specification version not very stable. This is mainly build around a Swagger-1.1-SNAPSHOT version of the spec.
+ * It has been built for Swagger-UI commit b659da04, which is from February.
+
+h2. Getting started
+
+There is no Maven repo yet, so you'll have to build this yourself with SBT. Then, there is no real documentation or examples yet, so you're on your own. I'll quickly improve on this though. For now, you can take a look at the sample Play 2 application in samples/play2/todolist and in the SampleApiDocumentation trait in the source (src/test/scala/net/eamelink/swaggerkit/play2/WritersSpec.scala).
+
+h2. License
+
+This software is licensed under the Apache 2 license, quoted below.
+
+Copyright 2012 Erik Bakker (http://eamelink.net).
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

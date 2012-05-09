@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Swagger.ui
+
+GET		/api/todos   				controllers.Todos.list(search: Option[String], withDone: Option[Boolean], orderBy: Option[Todo.Order.Value], direction: Option[OrderDirection.Value])
+POST	/api/todos					controllers.Todos.create
+GET		/api/todos/:todoId			controllers.Todos.show(todoId: Long)
+PUT		/api/tools/:todoId			controllers.Todos.update(todoId: Long)
+
+# Swagger routes
+GET   /api/resources.json          controllers.Swagger.discover()
+GET   /api/:id.json                controllers.Swagger.resource(id)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
