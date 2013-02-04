@@ -170,5 +170,5 @@ object SimpleTypes {
   object Boolean extends Type { val name = "boolean" }
   object Object extends Type { val name = "object" }
   object Any extends Type { val name = "any" }
-  case class Array(innerType: Type) extends Type { def name = "array" }
+  case class Array(innerType: Type) extends Type { def name = "Array[" + innerType.name + "]" }
 }
