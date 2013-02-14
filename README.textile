@@ -8,6 +8,11 @@ Swaggerkit is an alternative implementation that has no dependencies on JaxRS, o
 
 From these case classes, the JSON must be generated. This project currently contains an implementation that uses the Play 2.0 JSON library for that. 
 
+h2. Versions
+
+Version 0.1.1 is the latest for Play 2.0.x
+Version 0.2-SNAPSHOT is the latest for Play 2.1.x
+
 h2. Design considerations
 
  * There is no magic. There are case classes and a small DSL to help you construct the entire documentation structure, but nothing is inferred or automatically generated.
