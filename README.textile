@@ -10,8 +10,8 @@ From these case classes, the JSON must be generated. This project currently cont
 
 h2. Versions
 
-Version 0.1.1 is the latest for Play 2.0.x
-Version 0.2-SNAPSHOT is the latest for Play 2.1.x
+Version 0.3 is the latest for Play 2.3.x, built for both Scala 2.10 and 2.11
+
 
 h2. Design considerations
 
@@ -21,13 +21,12 @@ h2. Current Limitations
 
  * JSON only, there is no XML output supported. This limitation can be lifted in the future.
  * JSON generation currently depends on Play 2 library, because that's where I use it for. This limitation can be lifted in the future.
- * API not stable yet. There are still improvements going on, and the API will be changed.
  * Swagger specification version not very stable. This is mainly build around a Swagger-1.1-SNAPSHOT version of the spec.
  * It has been built for Swagger-UI commit b659da04, which is from February.
 
 h2. Getting started
 
-There is no Maven repo yet, so you'll have to build this yourself with SBT. Then, there is no real documentation or examples yet, so you're on your own. I'll quickly improve on this though. For now, you can take a look at the sample Play 2 application in samples/play2/todolist and in the SampleApiDocumentation trait in the source (src/test/scala/net/eamelink/swaggerkit/play2/WritersSpec.scala).
+There is no Maven repo yet, so you'll have to build this yourself with SBT. Then, there is no real documentation or examples yet, so you're on your own. For now, you can take a look at the sample Play 2 application in samples/play2/todolist and in the SampleApiDocumentation trait in the source (src/test/scala/net/eamelink/swaggerkit/play2/WritersSpec.scala).
 
 h2. License
 
