@@ -5,8 +5,8 @@ object Settings {
   val name = "swaggerkit" 
 
   val buildSettings = Project.defaultSettings ++ Seq(
-    version := "0.2.1-SNAPSHOT",
-    scalaVersion := "2.10.0",
+    version := "0.2.2-SNAPSHOT",
+    scalaVersion := "2.11.4",
     organization := "net.eamelink"
   )
 }
@@ -16,8 +16,8 @@ object Resolvers {
 }
 
 object Dependencies {
-  lazy val play = "play" %% "play" % "2.1.0"
-  lazy val specs = "org.specs2" %% "specs2" % "1.13" % "test"
+  lazy val play = "com.typesafe.play" %% "play" % "2.3.6"
+  lazy val specs = "org.specs2" %% "specs2" % "2.4.11" % "test"
 }
 
 object ApplicationBuild extends Build {
