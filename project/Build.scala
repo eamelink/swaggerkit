@@ -5,7 +5,7 @@ object Settings {
   val name = "swaggerkit" 
 
   val buildSettings = Defaults.coreDefaultSettings ++ Seq(
-    version := "0.3",
+    version := "0.4-SNAPSHOT",
     crossScalaVersions := Seq("2.10.4", "2.11.4"),
     organization := "net.eamelink"
   )
